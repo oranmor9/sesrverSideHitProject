@@ -22,6 +22,8 @@ async function getReport (year,month,user_id) {
     try {
         const userCosts = await report.find({
             user_id,
+            month,
+            year
         });
         console.log(userCosts);
     
